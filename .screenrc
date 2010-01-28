@@ -1,0 +1,30 @@
+# don't display the copyright page
+startup_message off
+
+defscrollback 2048
+
+vbell on
+
+# default shell for new screen windows.
+# The "-" before the shell makes it a login shell.
+shell -/bin/bash
+
+# default title for new window.
+# the "$ |" part is the search pattern screen looks for in the prompt
+# so it can do dynamic titles.
+shelltitle '$ |bash'
+
+#dynamic title for su process (binded to "<Ctrl-A> r")
+bind r screen -t '# |root:' sudo su -
+
+#open top into another frame (binded to "<Ctrl-A> t")
+#bind t screen -t top 9 nice top
+
+#Display date and other information in colorred window
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+#hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %{..Y} %Y/%m/%d %C:%s%A "
+
+#Display date and other information in caption on bottom
+#caption always "%{= kf}%5n  %t (%H) %=%Y-%m-%d %c:%s "
