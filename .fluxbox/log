@@ -1,0 +1,31 @@
+------------------------------------------
+Log File: /home/aorth/.fluxbox/log
+Fluxbox version: 1.1.1
+Compiled: Apr 30 2009 07:06:23
+Compiler: GCC
+Compiler version: 4.4.0
+
+Defaults:
+    menu: /etc/X11/fluxbox/fluxbox.menu-user
+   style: /usr/share/fluxbox/styles/Debian
+    keys: /etc/X11/fluxbox/keys
+    init: /etc/X11/fluxbox/init
+     nls: /usr/share/fluxbox/nls
+
+Compiled options (- => disabled): 
+-DEBUG
+EWMH
+GNOME
+IMLIB2
+NLS
+REMEMBER
+RENDER
+SHAPE
+SLIT
+TOOLBAR
+XFT
+XINERAMA
+XMB
+XPM
+
+------------------------------------------

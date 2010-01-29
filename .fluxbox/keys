@@ -1,0 +1,61 @@
+# Custom additions from Alan
+# Mod1 is alt...
+#Mod1 x :ExecCommand aterm -fg white -bg black -ls +sb
+#Mod1 x :ExecCommand urxvt -fg white -bg black -ls +sb -fn "xft:Liberation Mono:pixelsize=12"
+Mod1 x :ExecCommand urxvt -fg white -bg black -ls +sb -fn "xft:DejaVu Sans Mono:pixelsize=13"
+#Mod1 x :ExecCommand urxvt -fg white -bg black -ls +sb -fn "xft:Terminus:pixelsize=15"
+Mod1 F2 :ExecCommand gmrun
+Mod1 l :ExecCommand xscreensaver-command -lock
+
+# click on the desktop to get menus
+OnDesktop Mouse1 :HideMenus
+OnDesktop Mouse2 :WorkspaceMenu
+OnDesktop Mouse3 :RootMenu
+
+# alt + left/right click to move/resize a window
+OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
+OnWindow Mod1 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
+
+# middle click a window's titlebar and drag to attach windows
+OnTitlebar Mouse2 :StartTabbing
+
+# double click on the titlebar to shade
+OnTitlebar Double Mouse1 :Shade
+
+# right click on the titlebar for a menu of options
+OnTitlebar Mouse3 :WindowMenu
+
+# alt-tab
+Mod1 Tab :NextWindow {groups}
+Mod1 Shift Tab :PrevWindow {groups}
+
+# cycle through tabs in the current window
+Mod4 Tab :NextTab
+Mod4 Shift Tab :PrevTab
+
+# go to a specific tab in the current window
+Mod4 1 :Tab 1
+Mod4 2 :Tab 2
+Mod4 3 :Tab 3
+Mod4 4 :Tab 4
+Mod4 5 :Tab 5
+Mod4 6 :Tab 6
+Mod4 7 :Tab 7
+Mod4 8 :Tab 8
+Mod4 9 :Tab 9
+
+# current window commands
+Mod1 F4 :Close
+#Mod1 F9 :Minimize
+#Mod1 F10 :Maximize
+#Mod1 F11 :Fullscreen
+
+# open the window menu
+Mod1 space :WindowMenu
+
+# change to a specific workspace
+#Control F1 :Workspace 1
+Mod1 1 :Workspace 1
+Mod1 2 :Workspace 2
+Mod1 3 :Workspace 3
+Mod1 4 :Workspace 4
