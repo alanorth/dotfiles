@@ -3,3 +3,4 @@ Alan's dotfiles
 .vimrc
 .profile
 .screenrc
+.tmux.conf
