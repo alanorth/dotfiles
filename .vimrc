@@ -1,5 +1,6 @@
 set nu
 set ts=4
+set expandtab
 set sw=4
 set bs=2
 set bg=dark
