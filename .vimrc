@@ -14,6 +14,7 @@ if version >= 600
     filetype indent on      " enable file type indents
 endif
 
+" use 256-color "degraded" mode (default is 16 colors, best when terminal is using solarized colors too)
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 colorscheme solarized
