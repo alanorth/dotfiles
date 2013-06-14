@@ -11,8 +11,8 @@ alias less='less -R' # preserves colors in `less`
 
 # Environment
 PS1='[\u@\h: \w]\$ '
-EDITOR=/usr/bin/vim
-PAGER=/usr/bin/less
+export EDITOR=/usr/bin/vim
+export PAGER=/usr/bin/less
 # Aggressive read/write of history after every command
 PROMPT_COMMAND='history -a; history -n'
 
