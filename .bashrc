@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Aliases
-alias ls='ls --color=auto'
+alias ls='ls -F --color=auto'
 alias less='less -R' # preserves colors in `less`
 
 # Environment
