@@ -17,6 +17,8 @@ export PAGER=/usr/bin/less
 TITLEBAR='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 # Aggressive read/write of history after every command
 PROMPT_COMMAND="$TITLEBAR; history -a; history -n"
+# don't add commands starting with space to the history
+HISTCONTROL=ignorespace
 
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
