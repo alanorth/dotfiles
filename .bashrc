@@ -19,6 +19,8 @@ TITLEBAR='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 PROMPT_COMMAND="$TITLEBAR; history -a; history -n"
 # don't add commands starting with space to the history
 HISTCONTROL=ignorespace
+# use nicer fonts in Java apps
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
