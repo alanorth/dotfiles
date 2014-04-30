@@ -15,8 +15,7 @@ export EDITOR=/usr/bin/vim
 export PAGER=/usr/bin/less
 # sequence to set the terminal title to "user@hostname: pwd"
 TITLEBAR='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
-# Aggressive read/write of history after every command
-PROMPT_COMMAND="$TITLEBAR; history -a; history -n"
+PROMPT_COMMAND="$TITLEBAR"
 # don't add commands starting with space to the history
 HISTCONTROL=ignorespace
 
