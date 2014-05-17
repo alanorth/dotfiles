@@ -18,6 +18,8 @@ TITLEBAR='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 PROMPT_COMMAND="$TITLEBAR"
 # don't add commands starting with space to the history
 HISTCONTROL=ignorespace
+# ignore common commands in bash history
+HISTIGNORE='ls:bg:fg:history'
 
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
