@@ -16,8 +16,8 @@ export PAGER=/usr/bin/less
 # sequence to set the terminal title to "user@hostname: pwd"
 TITLEBAR='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 PROMPT_COMMAND="$TITLEBAR"
-# don't add commands starting with space to the history
-HISTCONTROL=ignorespace
+# ignore commands starting with space and duplicates
+HISTCONTROL=ignoreboth
 # ignore common commands in bash history
 HISTIGNORE='ls:bg:fg:history'
 
