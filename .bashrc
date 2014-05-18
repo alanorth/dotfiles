@@ -14,7 +14,7 @@ PS1='[\u@\h: \w]\$ '
 export EDITOR=/usr/bin/vim
 export PAGER=/usr/bin/less
 # sequence to set the terminal title to "user@hostname: pwd"
-#TITLEBAR='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+TITLEBAR='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 # ignore commands starting with space and duplicates
 HISTCONTROL=ignoreboth
 # ignore common commands in bash history
