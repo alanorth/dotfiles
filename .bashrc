@@ -19,8 +19,7 @@ TITLEBAR='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 HISTCONTROL=ignoreboth
 # ignore common commands in bash history
 HISTIGNORE='ls:bg:fg:history'
-# save history after every command (and set term title)
-PROMPT_COMMAND="history -a; history -c; history -r; $TITLEBAR"
+PROMPT_COMMAND="$TITLEBAR"
 
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
