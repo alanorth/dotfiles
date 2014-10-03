@@ -5,9 +5,15 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# OS-specific things
+if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
+    PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+else
+    alias less='less -R' # preserves colors in `less`
+fi
+
 # Aliases
 alias ls='ls -F --color=auto'
-alias less='less -R' # preserves colors in `less`
 
 # Environment
 PS1='[\u@\h: \w]\$ '
@@ -24,7 +30,7 @@ PROMPT_COMMAND="$TITLEBAR"
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
 
-# solarized dircolors
+# solarized dircolors (needs coreutils from homebrew on Mac OS X)
 [[ -r ~/.dircolors.ansi-dark ]] && eval `dircolors ~/.dircolors.ansi-dark`
 
 # Settings
