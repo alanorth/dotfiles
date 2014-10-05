@@ -31,7 +31,12 @@ PROMPT_COMMAND="$TITLEBAR"
 ANSIBLE_HOSTS=hosts
 
 # look for Node binaries in current directory
-PATH=$PATH:node_modules/.bin
+# if we have npm, we probably want to use npm binaries
+# I don't like installing globally (npm -g), so add local
+# node modules' bin to PATH
+if test $(which npm); then
+    PATH=$PATH:node_modules/.bin
+fi
 
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
