@@ -28,7 +28,7 @@ HISTIGNORE='ls:bg:fg:history'
 PROMPT_COMMAND="$TITLEBAR"
 
 # look for Ansible hosts file in current directory
-ANSIBLE_HOSTS=hosts
+export ANSIBLE_HOSTS=hosts
 
 # look for Node binaries in current directory
 # if we have npm, we probably want to use npm binaries
