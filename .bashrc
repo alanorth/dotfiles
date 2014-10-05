@@ -30,6 +30,9 @@ PROMPT_COMMAND="$TITLEBAR"
 # look for Ansible hosts file in current directory
 ANSIBLE_HOSTS=hosts
 
+# look for Node binaries in current directory
+PATH=$PATH:node_modules/.bin
+
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
 
@@ -47,3 +50,5 @@ shopt -s histappend
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+export PATH
