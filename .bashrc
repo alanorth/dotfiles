@@ -27,6 +27,9 @@ HISTCONTROL=ignoreboth
 HISTIGNORE='ls:bg:fg:history'
 PROMPT_COMMAND="$TITLEBAR"
 
+# look for Ansible hosts file in current directory
+ANSIBLE_HOSTS=hosts
+
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
 
