@@ -13,11 +13,11 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
         . $(brew --prefix)/etc/bash_completion
     fi
 else
-    alias less='less -R' # preserves colors in `less`
 fi
 
 # Aliases
 alias ls='ls -F --color=auto'
+alias less='less -R' # preserves colors in GNU coreutils' `less`
 
 # Environment
 PS1='[\u@\h: \w]\$ '
