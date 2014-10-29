@@ -41,6 +41,15 @@ if test $(which npm); then
     PATH=$PATH:node_modules/.bin
 fi
 
+# Enable pyenv
+# See: https://github.com/yyuu/pyenv#basic-github-checkout
+if [[ -d ~/.pyenv ]]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+
+    eval "$(pyenv init -)"
+fi
+
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
 
