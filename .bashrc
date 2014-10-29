@@ -9,7 +9,7 @@
 if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
-    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    if [[ -f $(brew --prefix)/etc/bash_completion ]]; then
         . $(brew --prefix)/etc/bash_completion
     fi
 fi
