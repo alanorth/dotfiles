@@ -48,6 +48,11 @@ if [[ -d ~/.pyenv ]]; then
     export PATH="$PYENV_ROOT/bin:$PATH"
 
     eval "$(pyenv init -)"
+    # optionally enable pyenv-virtualenv
+    # See: https://github.com/yyuu/pyenv-virtualenv
+    if [[ -d ~/.pyenv/plugins/pyenv-virtualenv ]]; then
+        eval "$(pyenv virtualenv-init -)"
+    fi
 fi
 
 # If a private bin directory exists, add it to PATH
