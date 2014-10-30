@@ -37,7 +37,7 @@ export ANSIBLE_HOSTS=hosts
 # if we have npm, we probably want to use npm binaries
 # I don't like installing globally (npm -g), so add local
 # node modules' bin to PATH
-if test $(which npm); then
+if test $(which npm >/dev/null 2>&1); then
     PATH=$PATH:node_modules/.bin
 fi
 
