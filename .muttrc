@@ -33,15 +33,12 @@ unhdr_order *                           # some distros order things by default
 hdr_order from: to: cc: bcc: date: subject:  # and in this order
 
 # Incoming
-#set imap_user = 'john.doe@gmail.com'
+set imap_user = 'alan.orth@gmail.com'
 
 # Outgoing
-#set smtp_url = 'smtp://john.doe@gmail.com@smtp.gmail.com:587/'
-#set from = 'john.doe@gmail.com'
+set smtp_url = 'smtp://alan.orth@gmail.com@smtp.gmail.com:587/'
+set from = 'alan.orth@gmail.com'
 set realname = 'Alan Orth'
-
-# include imap/smtp settings (above) from private file
-source ~/.mutt/muttrc-private
 
 # Mailbox settings
 set folder = 'imaps://imap.gmail.com/'
