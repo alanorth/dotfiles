@@ -32,7 +32,7 @@ alias ls='ls -F --color=auto'
 alias less='less -R' # preserves colors in GNU coreutils' `less`
 
 # Environment
-PS1='[%n@%m: %~]$ '
+export PS1='[%n@%m: %~]$ '
 export EDITOR=/usr/bin/vim
 export PAGER=/usr/bin/less
 
