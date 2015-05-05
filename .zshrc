@@ -20,24 +20,47 @@ compinit
 
 # OS-specific things
 if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
-    PATH=$(brew --prefix coreutils)/libexec/gnubin:/usr/local/sbin:$PATH
+    # set pkgsrc paths
+    # see: http://pkgsrc.joyent.com/install-on-osx/
+    PATH=/usr/pkg/sbin:/usr/pkg/bin:$PATH
+    MANPATH=/usr/pkg/man:$MANPATH
 
-    if [[ -f $(brew --prefix)/etc/bash_completion ]]; then
-        . $(brew --prefix)/etc/bash_completion
-    fi
+    # use pkgsrc's GNU coreutils (prefixed with 'g')
+    # requires at least: coreutils findutils gsed
+    alias du='gdu'
+    alias ls='gls -F --color=auto'
+    alias df='gdf'
+    alias rm='grm'
+    alias cp='gcp'
+    alias mv='gmv'
+    alias mkdir='gmkdir'
+    alias rmdir='grmdir'
+    alias chmod='gchmod'
+    alias chown='gchown'
+    alias ln='gln'
+    alias find='gfind'
+    alias less='gless -R' # preserves colors
+    alias sed='gsed'
+
+    # solarized dircolors (needs coreutils from pkgsrc)
+    [[ -r ~/.dircolors.ansi-dark ]] && eval `gdircolors ~/.dircolors.ansi-dark`
+
+elif [[ "$OSTYPE" =~ ^linux*$ ]]; then
+    # aliases
+    alias ls='ls -F --color=auto'
+    alias less='less -R' # preserves colors in GNU coreutils' `less`
+
+    # solarized dircolors
+    [[ -r ~/.dircolors.ansi-dark ]] && eval `dircolors ~/.dircolors.ansi-dark`
 fi
-
-# Aliases
-alias ls='ls -F --color=auto'
-alias less='less -R' # preserves colors in GNU coreutils' `less`
 
 # Environment
 export PS1='[%n@%m: %~]$ '
-export EDITOR=/usr/bin/vim
-export PAGER=/usr/bin/less
+export EDITOR=vim
+export PAGER=less
 
 # look for Ansible hosts file in current directory
-export ANSIBLE_HOSTS=hosts
+export ANSIBLE_INVENTORY=hosts
 
 # look for Node binaries in current directory
 # if we have npm, we probably want to use npm binaries
@@ -45,14 +68,14 @@ export ANSIBLE_HOSTS=hosts
 # node modules' bin to PATH
 command -v npm >/dev/null 2>&1
 if [[ $? -eq 0 ]]; then
-    export PATH=$PATH:node_modules/.bin
+    PATH=$PATH:node_modules/.bin
 fi
 
 # Enable pyenv
 # See: https://github.com/yyuu/pyenv#basic-github-checkout
 if [[ -d ~/.pyenv ]]; then
     export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
+    PATH="$PYENV_ROOT/bin:$PATH"
 
     eval "$(pyenv init -)"
     # optionally enable pyenv-virtualenv
@@ -65,7 +88,5 @@ fi
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
 
-# solarized dircolors (needs coreutils from homebrew on Mac OS X)
-[[ -r ~/.dircolors.ansi-dark ]] && eval `dircolors ~/.dircolors.ansi-dark`
-
 export PATH
+export MANPATH
