@@ -20,21 +20,44 @@ compinit
 
 # OS-specific things
 if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
-    PATH=$(brew --prefix coreutils)/libexec/gnubin:/usr/local/sbin:$PATH
+    # set pkgsrc paths
+    # see: http://pkgsrc.joyent.com/install-on-osx/
+    PATH=/usr/pkg/sbin:/usr/pkg/bin:$PATH
+    MANPATH=/usr/pkg/man:$MANPATH
 
-    if [[ -f $(brew --prefix)/etc/bash_completion ]]; then
-        . $(brew --prefix)/etc/bash_completion
-    fi
+    # use pkgsrc's GNU coreutils (prefixed with 'g')
+    # requires at least: coreutils findutils gsed
+    alias du='gdu'
+    alias ls='gls -F --color=auto'
+    alias df='gdf'
+    alias rm='grm'
+    alias cp='gcp'
+    alias mv='gmv'
+    alias mkdir='gmkdir'
+    alias rmdir='grmdir'
+    alias chmod='gchmod'
+    alias chown='gchown'
+    alias ln='gln'
+    alias find='gfind'
+    alias less='gless -R' # preserves colors
+    alias sed='gsed'
+
+    # solarized dircolors (needs coreutils from pkgsrc)
+    [[ -r ~/.dircolors.ansi-dark ]] && eval `gdircolors ~/.dircolors.ansi-dark`
+
+elif [[ "$OSTYPE" =~ ^linux*$ ]]; then
+    # aliases
+    alias ls='ls -F --color=auto'
+    alias less='less -R' # preserves colors in GNU coreutils' `less`
+
+    # solarized dircolors
+    [[ -r ~/.dircolors.ansi-dark ]] && eval `dircolors ~/.dircolors.ansi-dark`
 fi
-
-# Aliases
-alias ls='ls -F --color=auto'
-alias less='less -R' # preserves colors in GNU coreutils' `less`
 
 # Environment
 export PS1='[%n@%m: %~]$ '
-export EDITOR=/usr/bin/vim
-export PAGER=/usr/bin/less
+export EDITOR=vim
+export PAGER=less
 
 # look for Ansible hosts file in current directory
 export ANSIBLE_INVENTORY=hosts
@@ -64,8 +87,5 @@ fi
 
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
-
-# solarized dircolors (needs coreutils from homebrew on Mac OS X)
-[[ -r ~/.dircolors.ansi-dark ]] && eval `dircolors ~/.dircolors.ansi-dark`
 
 export PATH
