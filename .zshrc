@@ -68,14 +68,14 @@ export ANSIBLE_INVENTORY=hosts
 # node modules' bin to PATH
 command -v npm >/dev/null 2>&1
 if [[ $? -eq 0 ]]; then
-    export PATH=$PATH:node_modules/.bin
+    PATH=$PATH:node_modules/.bin
 fi
 
 # Enable pyenv
 # See: https://github.com/yyuu/pyenv#basic-github-checkout
 if [[ -d ~/.pyenv ]]; then
     export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
+    PATH="$PYENV_ROOT/bin:$PATH"
 
     eval "$(pyenv init -)"
     # optionally enable pyenv-virtualenv
@@ -89,3 +89,4 @@ fi
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
 
 export PATH
+export MANPATH
