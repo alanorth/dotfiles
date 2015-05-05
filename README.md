@@ -11,6 +11,7 @@ $ ln -sf ~/src/git/dotfiles/.vim .
 $ ln -sf ~/src/git/dotfiles/.vimrc .
 $ ln -sf ~/src/git/dotfiles/.tmux.conf .
 $ ln -sf ~/src/git/dotfiles/.dircolors.ansi-dark .
+$ ln -sf ~/src/git/dotfiles/.zshrc .
 ```
 
 ## .bashrc
@@ -21,3 +22,6 @@ Solarized configuration
 
 ## .vimrc
 Syntax highlighting, Solarized color scheme, tab stops to 4 spaces, etc.
+
+## .zshrc
+Configures a custom prompt, adds paths for pkgsrc on Mac OS X, sets up pyenv, adds aliases, Solarized dircolors, etc.
