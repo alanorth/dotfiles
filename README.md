@@ -1,4 +1,4 @@
-# Alan's dotfiles
+## Alan's dotfiles
 Dotfiles for pretty much every Linux system I have access to.  After setting up a new host, I do:
 
 ```console
@@ -14,14 +14,14 @@ $ ln -sf ~/src/git/dotfiles/.dircolors.ansi-dark .
 $ ln -sf ~/src/git/dotfiles/.zshrc .
 ```
 
-## .bashrc
+### .bashrc
 Configures the shell to have a custom PS1, add paths for NPM and Homebrew, setup pyenv for virtualenvs, some common aliaes, Solarized dircolors, etc.
 
-## .tmuxrc
+### .tmuxrc
 Solarized configuration
 
-## .vimrc
+### .vimrc
 Syntax highlighting, Solarized color scheme, tab stops to 4 spaces, etc.
 
-## .zshrc
+### .zshrc
 Configures a custom prompt, adds paths for pkgsrc on Mac OS X, sets up pyenv, adds aliases, Solarized dircolors, etc.
