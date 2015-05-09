@@ -60,7 +60,7 @@ export EDITOR=vim
 export PAGER=less
 
 # look for Ansible hosts file in current directory
-export ANSIBLE_INVENTORY=hosts
+export ANSIBLE_HOSTS=hosts
 
 # look for Node binaries in current directory
 # if we have npm, we probably want to use npm binaries
