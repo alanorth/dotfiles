@@ -39,7 +39,6 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     alias chown='gchown'
     alias ln='gln'
     alias find='gfind'
-    alias less='gless -R' # preserves colors
     alias sed='gsed'
 
     # solarized dircolors (needs coreutils from pkgsrc)
@@ -48,11 +47,12 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
 elif [[ "$OSTYPE" =~ ^linux*$ ]]; then
     # aliases
     alias ls='ls -F --color=auto'
-    alias less='less -R' # preserves colors in GNU coreutils' `less`
 
     # solarized dircolors
     [[ -r ~/.dircolors.ansi-dark ]] && eval `dircolors ~/.dircolors.ansi-dark`
 fi
+
+alias less='less -R' # preserves colors in GNU coreutils' `less`
 
 # Environment
 export PS1='[%n@%m: %~]$ '
