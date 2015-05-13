@@ -12,6 +12,7 @@ $ ln -sf ~/src/git/dotfiles/.vimrc .
 $ ln -sf ~/src/git/dotfiles/.tmux.conf .
 $ ln -sf ~/src/git/dotfiles/.dircolors.ansi-dark .
 $ ln -sf ~/src/git/dotfiles/.zshrc .
+$ ln -sf ~/src/git/dotfiles/.npmrc .
 ```
 
 ### .bashrc
@@ -25,6 +26,9 @@ Syntax highlighting, Solarized color scheme, tab stops to 4 spaces, etc.
 
 ### .zshrc
 Configures a custom prompt, adds paths for pkgsrc on Mac OS X, sets up pyenv, adds aliases, Solarized dircolors, etc.
+
+### .npmrc
+Configures a local npm package directory (so I can `npm install -g` without needing sudo)
 
 ### License
 Copyright (C) 2015  Alan Orth
