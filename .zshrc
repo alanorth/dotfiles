@@ -60,13 +60,9 @@ export PAGER=less
 # look for Ansible hosts file in current directory
 export ANSIBLE_HOSTS=hosts
 
-# look for Node binaries in current directory
-# if we have npm, we probably want to use npm binaries
-# I don't like installing globally (npm -g), so add local
-# node modules' bin to PATH
-command -v npm >/dev/null 2>&1
-if [[ $? -eq 0 ]]; then
-    PATH=$PATH:node_modules/.bin
+# Enable user's "global" npm packages
+if [[ -d ~/.npm-packages ]]; then
+    PATH=$PATH:~/node-packages/bin
 fi
 
 # Enable pyenv
