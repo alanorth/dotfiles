@@ -62,7 +62,7 @@ export ANSIBLE_HOSTS=hosts
 
 # Enable user's "global" npm packages
 if [[ -d ~/.npm-packages ]]; then
-    PATH=$PATH:~/node-packages/bin
+    PATH=$PATH:~/.npm-packages/bin
 fi
 
 # Enable pyenv
