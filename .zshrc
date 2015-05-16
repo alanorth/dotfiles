@@ -80,7 +80,7 @@ if [[ -d ~/.pyenv ]]; then
 fi
 
 # If a private bin directory exists, add it to PATH
-[[ -d ~/bin ]] && PATH="$PATH:~/bin"
+[[ -d ~/bin ]] && PATH=$PATH:~/bin
 
 export PATH
 export MANPATH
