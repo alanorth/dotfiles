@@ -82,5 +82,13 @@ fi
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH=$PATH:~/bin
 
+# If a binary go distribution exists, add it to PATH
+# From here: http://golang.org/dl/
+if [[ -d ~/Downloads/go ]]; then
+    export GOROOT=~/Downloads/go
+    export GOPATH=~/src/go
+    PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+fi
+
 export PATH
 export MANPATH
