@@ -42,7 +42,7 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     alias sed='gsed'
     alias dircolors='gdircolors'
 
-elif [[ "$OSTYPE" =~ ^linux*$ ]]; then
+elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
     # aliases
     alias ls='ls -F --color=auto'
 fi
