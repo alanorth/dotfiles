@@ -43,6 +43,10 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     alias sed='gsed'
     alias dircolors='gdircolors'
 
+    # If BasicTeX installation exists, add it to PATH
+    # See: https://tug.org/mactex/morepackages.html
+    [[ -d /usr/local/texlive/2014basic/bin/x86_64-darwin ]] && PATH=$PATH:/usr/local/texlive/2014basic/bin/x86_64-darwin
+
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
     # aliases
     alias ls='ls -F --color=auto'
