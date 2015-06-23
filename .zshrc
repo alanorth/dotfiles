@@ -95,5 +95,8 @@ if [[ -d ~/Downloads/go ]]; then
     PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
 
+# If heroku toolbelt is installed, add it to PATH
+[[ -d /usr/local/heroku ]] && PATH=$PATH:/usr/local/heroku/bin
+
 export PATH
 export MANPATH
