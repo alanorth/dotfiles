@@ -66,7 +66,7 @@ export PAGER=less
 export ANSIBLE_HOSTS=hosts
 
 # Enable user's "global" npm packages
-if [[ -d ~/.npm-packages ]]; then
+if [[ -d ~/.npm-packages/bin ]]; then
     PATH=$PATH:~/.npm-packages/bin
 fi
 
@@ -96,7 +96,7 @@ if [[ -d ~/Downloads/go ]]; then
 fi
 
 # If heroku toolbelt is installed, add it to PATH
-[[ -d /usr/local/heroku ]] && PATH=$PATH:/usr/local/heroku/bin
+[[ -d /usr/local/heroku/bin ]] && PATH=$PATH:/usr/local/heroku/bin
 
 export PATH
 export MANPATH
