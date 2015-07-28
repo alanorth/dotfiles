@@ -23,8 +23,8 @@ compinit
 if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     # set pkgsrc paths
     # see: http://pkgsrc.joyent.com/install-on-osx/
-    PATH=/usr/pkg/sbin:/usr/pkg/bin:$PATH
-    MANPATH=/usr/pkg/man:$MANPATH
+    PATH=/opt/pkg/sbin:/opt/pkg/bin:$PATH
+    MANPATH=/opt/pkg/man:$MANPATH
 
     # use pkgsrc's GNU coreutils (prefixed with 'g')
     # requires at least: coreutils findutils gsed
