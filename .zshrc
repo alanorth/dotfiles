@@ -55,7 +55,7 @@ fi
 alias less='less -R' # preserves colors in GNU coreutils' `less`
 
 # solarized dircolors
-[[ ! "$OSTYPE" =~ ^darwin.*$ ]] && [[ -r ~/.dircolors.ansi-dark ]] && eval `dircolors ~/.dircolors.ansi-dark`
+[[ -r ~/.dircolors.ansi-dark ]] && eval `dircolors ~/.dircolors.ansi-dark`
 
 # Environment
 export PS1='[%n@%m: %~]$ '
