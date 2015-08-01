@@ -42,6 +42,7 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     alias find='gfind'
     alias sed='gsed'
     alias dircolors='gdircolors'
+    alias sort='gsort'
 
     # If BasicTeX installation exists, add it to PATH
     # See: https://tug.org/mactex/morepackages.html
