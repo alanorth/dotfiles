@@ -43,6 +43,8 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     alias sed='gsed'
     alias dircolors='gdircolors'
     alias sort='gsort'
+    # pkgsrc doesn't provide vimdiff wrapper, but it's just `vim -d` anyways
+    alias vimdiff='vim -d'
 
     # If BasicTeX installation exists, add it to PATH
     # See: https://tug.org/mactex/morepackages.html
