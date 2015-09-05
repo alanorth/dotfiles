@@ -1,4 +1,4 @@
-## Alan's dotfiles
+# Alan's dotfiles
 Dotfiles for pretty much every Linux system I have access to.  After setting up a new host, I do:
 
 ```console
@@ -15,22 +15,22 @@ $ ln -sf ~/src/git/dotfiles/.zshrc .
 $ ln -sf ~/src/git/dotfiles/.npmrc .
 ```
 
-### .bashrc
+## .bashrc
 Configures the shell to have a custom PS1, add paths for NPM and Homebrew, setup pyenv for virtualenvs, some common aliaes, Solarized dircolors, etc.
 
-### .tmuxrc
+## .tmuxrc
 Solarized configuration
 
-### .vimrc
+## .vimrc
 Syntax highlighting, Solarized color scheme, tab stops to 4 spaces, etc.
 
-### .zshrc
+## .zshrc
 Configures a custom prompt, adds paths for pkgsrc on Mac OS X, sets up pyenv, adds aliases, Solarized dircolors, etc.
 
-### .npmrc
+## .npmrc
 Configures a local npm package directory (so I can `npm install -g` without needing sudo)
 
-### License
+## License
 Copyright (C) 2015  Alan Orth
 
 This program is free software: you can redistribute it and/or modify
