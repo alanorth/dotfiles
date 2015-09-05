@@ -116,7 +116,7 @@ smartresize() {
 # image slightly larger but includes quite a bit of useful(?) metadata
 # stripping with `jpegtran -copy none` strips 50KB+ off
 gmsmartresize() {
-    gm mogrify -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace RGB -output-directory $3 $1
+    gm mogrify -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -output-directory $3 $1
 }
 
 export PATH
