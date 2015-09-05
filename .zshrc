@@ -102,18 +102,13 @@ fi
 # If heroku toolbelt is installed, add it to PATH
 [[ -d /usr/local/heroku/bin ]] && PATH=$PATH:/usr/local/heroku/bin
 
-# resize images using ImageMagick
+# resize images using GraphicsMagick
 #
-#   $ smartresize DSC_0788.JPG 1920 outputdir
+#   $ smartresize DSC_0788.JPG 1920x1080 outputdir
 #
+# Similar to the one from SmashingMagazine, but ported to GraphicsMagick
 # see: http://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/
 smartresize() {
-    mogrify -path $3 -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB $1
-}
-
-# ported to graphicsmagick
-# faster, more sane command line options, tags sRGB by default, etc
-gmsmartresize() {
     gm mogrify -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -strip -output-directory $3 $1
 }
 
