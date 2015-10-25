@@ -69,9 +69,9 @@ export PAGER=less
 # look for Ansible hosts file in current directory
 export ANSIBLE_HOSTS=hosts
 
-# Enable user's "global" npm packages
-if [[ -d ~/.npm-packages/bin ]]; then
-    PATH=$PATH:~/.npm-packages/bin
+# Enable node version manager (nvm)
+if [[ -d ~/.nvm ]]; then
+    . ~/.nvm/nvm.sh
 fi
 
 # Enable pyenv
