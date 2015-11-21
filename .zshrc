@@ -26,6 +26,9 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     PATH=/opt/pkg/sbin:/opt/pkg/bin:$PATH
     MANPATH=/opt/pkg/man:$MANPATH
 
+    # pass needs umount and diskutil, which are in /sbin and /usr/sbin
+    PATH=$PATH:/sbin:/usr/sbin
+
     # use pkgsrc's GNU coreutils (prefixed with 'g')
     # requires at least: coreutils findutils gsed
     alias du='gdu'
