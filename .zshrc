@@ -21,16 +21,16 @@ compinit
 
 # OS-specific things
 if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
-    # set pkgsrc paths
-    # see: http://pkgsrc.joyent.com/install-on-osx/
-    PATH=/opt/pkg/sbin:/opt/pkg/bin:$PATH
-    MANPATH=/opt/pkg/man:$MANPATH
+    # set homebrew paths
+    # see: http://brew.sh/
+    PATH=/opt/brew/sbin:/opt/brew/bin:$PATH
+    MANPATH=/opt/brew/man:$MANPATH
 
     # pass needs umount and diskutil, which are in /sbin and /usr/sbin
     PATH=$PATH:/sbin:/usr/sbin
 
-    # use pkgsrc's GNU coreutils (prefixed with 'g')
-    # requires at least: coreutils findutils gsed
+    # use homebrew's GNU coreutils (prefixed with 'g')
+    # requires at least: coreutils findutils gnu-sed
     alias du='gdu'
     alias ls='gls -F --color=auto'
     alias df='gdf'
