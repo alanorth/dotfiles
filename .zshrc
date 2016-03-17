@@ -124,6 +124,17 @@ smartresize() {
     gm mogrify -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace Line -strip -output-directory $3 $1
 }
 
+# optimize jpeg using GraphicsMagick
+#
+#   $ jpegoptimize DSC_0788.JPG outputdir [quality]
+#
+# Similar to smartresize above, but just optmizes the jpeg
+jpegoptimize() {
+    if [[ -z $3 ]]; then QUALITY=82; else QUALITY=$3; fi
+
+    gm mogrify -filter Triangle -define filter:support=2 -unsharp 0.25x0.08+8.3+0.045 -dither -quality $QUALITY -define jpeg:fancy-upsampling=off -interlace Line -strip -output-directory $2 $1
+}
+
 # generate random password 25 characters long:
 # 	$ openssl rand -base64 18 | wc -c
 #    	  25
