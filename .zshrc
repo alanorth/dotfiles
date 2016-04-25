@@ -26,6 +26,10 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     PATH=/opt/brew/sbin:/opt/brew/bin:$PATH
     MANPATH=/opt/brew/man:$MANPATH
 
+    # opt out of Homebrew analytics
+    # see: https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
+    export HOMEBREW_NO_ANALYTICS=1
+
     # pass needs umount and diskutil, which are in /sbin and /usr/sbin
     PATH=$PATH:/sbin:/usr/sbin
 
