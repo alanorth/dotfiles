@@ -82,6 +82,12 @@ fi
 # Initialize pyenv if it exists
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+# Initialize jenv if it exists
+if which jenv > /dev/null; then
+  export JENV_ROOT=~/.jenv
+  eval "$(jenv init -)";
+fi
+
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH=$PATH:~/bin
 
