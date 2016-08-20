@@ -93,15 +93,6 @@ if [[ -d ~/.pyenv ]]; then
     fi
 fi
 
-# Enable jenv
-# See: https://github.com/gcuisinier/jenv
-if [[ -d ~/.jenv ]]; then
-    export JENV_ROOT="$HOME/.jenv"
-    PATH="$JENV_ROOT/bin:$PATH"
-
-    eval "$(jenv init -)"
-fi
-
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH=$PATH:~/bin
 
