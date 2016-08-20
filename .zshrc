@@ -99,8 +99,6 @@ if [[ -d ~/Downloads/go ]]; then
     PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
 
-# If heroku toolbelt is installed, add it to PATH
-[[ -d /usr/local/heroku/bin ]] && PATH=$PATH:/usr/local/heroku/bin
 
 # resize images using GraphicsMagick
 #
