@@ -29,6 +29,11 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     # opt out of Homebrew analytics
     # see: https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
     export HOMEBREW_NO_ANALYTICS=1
+    export HOMEBREW_NO_AUTO_UPDATE=1
+    export HOMEBREW_NO_EMOJI=1
+    export HOMEBREW_NO_INSECURE_REDIRECT=1
+    export HOMEBREW_MAKE_JOBS=3
+    export HOMEBREW_NO_AUTO_UPDATE=1
 
     # pass needs umount and diskutil, which are in /sbin and /usr/sbin
     PATH=$PATH:/sbin:/usr/sbin
