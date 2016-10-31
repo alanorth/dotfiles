@@ -79,7 +79,7 @@ export PAGER=less
 export ANSIBLE_HOSTS=hosts
 
 # Enable node version manager (nvm)
-if [[ -d ~/.nvm ]]; then
+if [[ -s ~/.nvm/nvm.sh ]]; then
     . ~/.nvm/nvm.sh
 fi
 
