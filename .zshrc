@@ -3,7 +3,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt append_history           # append
 setopt hist_ignore_all_dups     # no duplicate
-unsetopt hist_ignore_space      # ignore space prefixed commands
+setopt hist_ignore_space        # ignore space prefixed commands
 setopt hist_reduce_blanks       # trim blanks
 setopt inc_append_history       # add commands as they are typed, don't wait until shell exit
 setopt share_history            # share hist between sessions
