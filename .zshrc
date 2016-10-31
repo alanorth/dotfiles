@@ -79,9 +79,7 @@ export PAGER=less
 export ANSIBLE_HOSTS=hosts
 
 # Enable node version manager (nvm)
-if [[ -s ~/.nvm/nvm.sh ]]; then
-    . ~/.nvm/nvm.sh
-fi
+[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 
 # Initialize pyenv if it exists
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
@@ -93,9 +91,7 @@ if which jenv > /dev/null; then
 fi
 
 # Enable ruby version manager if it exists
-if [[ -s ~/.rvm/scripts/rvm ]];
-  . ~/.rvm/scripts/rvm
-fi
+[[ -s ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
 
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH=$PATH:~/bin
