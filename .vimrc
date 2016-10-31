@@ -13,5 +13,4 @@ filetype on             " enable file type detection
 filetype plugin on      " enable file type plugins
 filetype indent on      " enable file type indents
 
-let g:solarized_termtrans=1
 colorscheme solarized
