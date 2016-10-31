@@ -19,3 +19,23 @@ colorscheme solarized
 " see: https://jezenthomas.com/how-i-write-invoices-in-vim/
 set exrc " Enable use of directory-specific .vimrc
 set secure " Only run autocommands owned by me
+
+" from: https://github.com/jfrazelle/.vim/blob/master/vimrc
+set noswapfile                  " Don't use swapfile
+set nobackup                    " Don't create annoying backup files
+set nowritebackup
+set splitright                  " Split vertical windows right to the current windows
+set splitbelow                  " Split horizontal windows below to the current windows
+set encoding=utf-8              " Set default encoding to UTF-8
+
+set fileformats=unix,dos,mac    " Prefer Unix over Windows over OS 9 formats
+
+set nocompatible
+set incsearch                   " Shows the match while typing
+set hlsearch                    " Highlight found searches
+set ignorecase                  " Search case insensitive...
+set smartcase                   " ... but not when search pattern contains upper case characters
+
+" speed up syntax highlighting
+set nocursorcolumn
+set nocursorline
