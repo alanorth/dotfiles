@@ -1,6 +1,6 @@
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=2000
+SAVEHIST=2000
 setopt append_history           # append
 setopt hist_ignore_all_dups     # no duplicate
 setopt hist_ignore_space        # ignore space prefixed commands
