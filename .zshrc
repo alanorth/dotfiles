@@ -92,6 +92,11 @@ if which jenv > /dev/null; then
   eval "$(jenv init -)"
 fi
 
+# Enable ruby version manager if it exists
+if [[ -s ~/.rvm/scripts/rvm ]];
+  . ~/.rvm/scripts/rvm
+fi
+
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH=$PATH:~/bin
 
