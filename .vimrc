@@ -14,3 +14,8 @@ filetype plugin on      " enable file type plugins
 filetype indent on      " enable file type indents
 
 colorscheme solarized
+
+" for per-directory vimrc files
+" see: https://jezenthomas.com/how-i-write-invoices-in-vim/
+set exrc " Enable use of directory-specific .vimrc
+set secure " Only run autocommands owned by me
