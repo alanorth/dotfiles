@@ -31,7 +31,6 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     export HOMEBREW_NO_ANALYTICS=1
     export HOMEBREW_NO_AUTO_UPDATE=1
     export HOMEBREW_NO_EMOJI=1
-    export HOMEBREW_NO_INSECURE_REDIRECT=1
     export HOMEBREW_MAKE_JOBS=3
     export HOMEBREW_NO_AUTO_UPDATE=1
 
