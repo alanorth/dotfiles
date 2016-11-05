@@ -37,23 +37,10 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     # pass needs umount and diskutil, which are in /sbin and /usr/sbin
     PATH=$PATH:/sbin:/usr/sbin
 
-    # use homebrew's GNU coreutils (prefixed with 'g')
+    # use some GNU stuff from homebrew: coreutils findutils gnu-sed
     # requires at least: coreutils findutils gnu-sed
-    alias du='gdu'
-    alias ls='gls -F --color=auto'
-    alias df='gdf'
-    alias rm='grm'
-    alias cp='gcp'
-    alias mv='gmv'
-    alias mkdir='gmkdir'
-    alias rmdir='grmdir'
-    alias chmod='gchmod'
-    alias chown='gchown'
-    alias ln='gln'
-    alias find='gfind'
-    alias sed='gsed'
-    alias dircolors='gdircolors'
-    alias sort='gsort'
+    PATH=/opt/brew/opt/coreutils/libexec/gnubin:/opt/brew/opt/findutils/libexec/gnubin:/opt/brew/opt/gnu-sed/libexec/gnubin:$PATH
+
     alias grep='ggrep'
 
     # If BasicTeX installation exists, add it to PATH
@@ -61,10 +48,10 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     [[ -d /usr/local/texlive/2015basic/bin/x86_64-darwin ]] && PATH=$PATH:/usr/local/texlive/2015basic/bin/x86_64-darwin
 
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
-    # aliases
-    alias ls='ls -F --color=auto'
+    # noop
 fi
 
+alias ls='ls -F --color=auto'
 alias less='less -R' # preserves colors in GNU coreutils' `less`
 
 # solarized dircolors
