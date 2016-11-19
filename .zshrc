@@ -99,7 +99,9 @@ fi
 # Similar to the one from SmashingMagazine, but ported to GraphicsMagick
 # see: http://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/
 smartresize() {
-    gm mogrify -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 2x0.5+0.7+0 -dither -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace Line -strip -output-directory $3 $1
+    if [[ -z $4 ]]; then QUALITY=82; else QUALITY=$4; fi
+
+    gm mogrify -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 2x0.5+0.7+0 -dither -quality $QUALITY -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace Line -strip -output-directory $3 $1
 }
 
 # optimize jpeg using GraphicsMagick
