@@ -120,5 +120,9 @@ genpass() {
     openssl rand -base64 18
 }
 
+# Activate GPG agent and cache the password after first use
+# See: https://github.com/axtl/gpg-agent.zsh
+source ~/src/git/dotfiles/gpg-agent.plugin.zsh
+
 export PATH
 export MANPATH
