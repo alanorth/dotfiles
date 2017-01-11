@@ -126,11 +126,10 @@ jpegoptimize() {
     gm mogrify -filter Triangle -define filter:support=2 -unsharp 2x0.5+0.7+0 -dither -quality $QUALITY -define jpeg:fancy-upsampling=off -interlace Line -strip -output-directory $2 $1
 }
 
-# generate random password 25 characters long:
-# 	$ openssl rand -base64 18 | wc -c
-#    	  25
+# generate random password 15 characters long
+# See: https://unix.stackexchange.com/questions/230673/how-to-generate-a-random-string
 genpass() {
-    openssl rand -base64 18
+    </dev/urandom tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' | head -c 15 ; echo
 }
 
 # Activate GPG agent and cache the password after first use
