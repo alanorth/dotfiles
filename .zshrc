@@ -102,10 +102,9 @@ if [[ -d ~/Downloads/go ]]; then
     PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
 
-
 # resize images using GraphicsMagick
 #
-#   $ smartresize DSC_0788.JPG 1920x1080 outputdir
+#   $ smartresize DSC_0788.JPG 1920x1080 outputdir [quality]
 #
 # Similar to the one from SmashingMagazine, but ported to GraphicsMagick
 # see: http://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/
