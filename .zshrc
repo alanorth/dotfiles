@@ -45,7 +45,7 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
 
     # If BasicTeX installation exists, add it to PATH
     # See: https://tug.org/mactex/morepackages.html
-    [[ -d /usr/local/texlive/2015basic/bin/x86_64-darwin ]] && PATH=$PATH:/usr/local/texlive/2015basic/bin/x86_64-darwin
+    [[ -d /usr/local/texlive/2016basic/bin/x86_64-darwin ]] && PATH=$PATH:/usr/local/texlive/2016basic/bin/x86_64-darwin
 
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
     # noop
