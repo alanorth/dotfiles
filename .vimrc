@@ -1,9 +1,9 @@
-set nu
-set ts=4
-set expandtab
-set sw=4
-set bs=2
-set bg=dark
+set number          " show line numbers
+set tabstop=4       " number of visual spaces per tab
+set shiftwidth=4    " number of spaces in an indent
+set expandtab       " tabs are spaces
+set backspace=2     " backspace like in a graphical text editor
+set background=dark
 set incsearch
 set wildmode=longest,list   " change filename autocomplete to be more like bash
 set mouse=v                 " some vim defaults to mouse=a, which sucks for copying and pasting in Xorg
