@@ -83,7 +83,7 @@ if [[ -d ~/.pyenv ]]; then
 fi
 
 # Initialize jenv if it exists
-if which jenv > /dev/null; then
+if [[ -d ~/.jenv ]]; then
   export JENV_ROOT=~/.jenv
   eval "$(jenv init -)"
 fi
