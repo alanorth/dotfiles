@@ -42,20 +42,6 @@ if [[ $? -eq 0 ]]; then
     export PATH=$PATH:node_modules/.bin
 fi
 
-# Enable pyenv
-# See: https://github.com/yyuu/pyenv#basic-github-checkout
-if [[ -d ~/.pyenv ]]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-
-    eval "$(pyenv init -)"
-    # optionally enable pyenv-virtualenv
-    # See: https://github.com/yyuu/pyenv-virtualenv
-    if [[ -d ~/.pyenv/plugins/pyenv-virtualenv ]]; then
-        eval "$(pyenv virtualenv-init -)"
-    fi
-fi
-
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
 
