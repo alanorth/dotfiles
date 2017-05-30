@@ -65,20 +65,6 @@ export ANSIBLE_HOSTS=hosts
 # Enable node version manager (nvm)
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 
-# Enable pyenv
-# See: https://github.com/yyuu/pyenv#basic-github-checkout
-if [[ -d ~/.pyenv ]]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    PATH="$PYENV_ROOT/bin:$PATH"
-
-    eval "$(pyenv init -)"
-    # optionally enable pyenv-virtualenv
-    # See: https://github.com/yyuu/pyenv-virtualenv
-    if [[ -d ~/.pyenv/plugins/pyenv-virtualenv ]]; then
-        eval "$(pyenv virtualenv-init -)"
-    fi
-fi
-
 # Initialize jenv if it exists
 if [[ -d ~/.jenv ]]; then
   export JENV_ROOT=~/.jenv
