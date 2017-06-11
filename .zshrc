@@ -116,7 +116,7 @@ genpass() {
 
 # set GPG TTY
 export GPG_TTY=$(tty)
-#
+
 # Refresh gpg-agent tty in case user switches into an X Session
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
