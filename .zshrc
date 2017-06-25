@@ -65,12 +65,6 @@ export ANSIBLE_HOSTS=hosts
 # Enable node version manager (nvm)
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 
-# Initialize jenv if it exists
-if [[ -d ~/.jenv ]]; then
-  export JENV_ROOT=~/.jenv
-  eval "$(jenv init -)"
-fi
-
 # Enable ruby version manager if it exists
 [[ -s ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
 
