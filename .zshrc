@@ -114,5 +114,8 @@ export GPG_TTY=$(tty)
 # Refresh gpg-agent tty in case user switches into an X Session
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
+# Speed up JVM start for short-lived Java programs
+# See: https://zeroturnaround.com/rebellabs/your-maven-build-is-slow-speed-it-up/
+export MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
 export PATH
 export MANPATH
