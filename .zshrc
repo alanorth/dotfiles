@@ -21,22 +21,17 @@ compinit
 
 # OS-specific things
 if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
-    # set homebrew paths
-    # see: http://brew.sh/
-    PATH=/opt/brew/sbin:/opt/brew/bin:$PATH
-    MANPATH=/opt/brew/man:$MANPATH
+    # Add brew stuff to MANPATH
+    MANPATH=/usr/local/share/man:/usr/local/opt/postgresql@9.5/share/man:$PATH
 
     # opt out of Homebrew analytics
     # see: https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
     export HOMEBREW_NO_ANALYTICS=1
     export HOMEBREW_NO_EMOJI=1
 
-    # pass needs umount and diskutil, which are in /sbin and /usr/sbin
-    PATH=$PATH:/sbin:/usr/sbin
-
     # use some GNU stuff from homebrew: coreutils findutils gnu-sed
     # requires at least: coreutils findutils gnu-sed
-    PATH=/opt/brew/opt/coreutils/libexec/gnubin:/opt/brew/opt/findutils/libexec/gnubin:/opt/brew/opt/gnu-sed/libexec/gnubin:$PATH
+    PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
     alias grep='ggrep'
 
