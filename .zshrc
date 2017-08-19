@@ -28,6 +28,7 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     # see: https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
     export HOMEBREW_NO_ANALYTICS=1
     export HOMEBREW_NO_EMOJI=1
+    export HOMEBREW_NO_AUTO_UPDATE=1
 
     # use some GNU stuff from homebrew: coreutils findutils gnu-sed
     # requires at least: coreutils findutils gnu-sed
