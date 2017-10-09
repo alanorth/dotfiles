@@ -40,6 +40,7 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     # See: https://tug.org/mactex/morepackages.html
     [[ -d /usr/local/texlive/2016basic/bin/x86_64-darwin ]] && PATH=$PATH:/usr/local/texlive/2016basic/bin/x86_64-darwin
 
+    PATH="/usr/local/opt/postgresql@9.5/bin:/usr/local/opt/tomcat@7/bin:$PATH"
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
     # noop
 fi
