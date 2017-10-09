@@ -55,9 +55,6 @@ export PS1='[%n@%m: %~]$ '
 export EDITOR=vim
 export PAGER=less
 
-# look for Ansible hosts file in current directory
-export ANSIBLE_HOSTS=hosts
-
 # Enable node version manager (nvm)
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 
