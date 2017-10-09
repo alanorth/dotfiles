@@ -59,8 +59,8 @@ export PAGER=less
 # Enable node version manager (nvm)
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 
-# Enable ruby version manager if it exists
-[[ -s ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
+# Enable java version manager (jenv)
+[[ -d ~/.jenv ]] && eval "$(jenv init -)"
 
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH=$PATH:~/bin
