@@ -41,7 +41,7 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
 
     # Add BasicTeX to PATH
     # See: https://tug.org/mactex/morepackages.html
-    PATH=$PATH:/usr/local/texlive/2016basic/bin/x86_64-darwin
+    PATH=$PATH:/usr/local/texlive/2017basic/bin/x86_64-darwin
 
     PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
