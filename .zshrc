@@ -39,9 +39,9 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
 
     alias grep='ggrep'
 
-    # If BasicTeX installation exists, add it to PATH
+    # Add BasicTeX to PATH
     # See: https://tug.org/mactex/morepackages.html
-    [[ -d /usr/local/texlive/2016basic/bin/x86_64-darwin ]] && PATH=$PATH:/usr/local/texlive/2016basic/bin/x86_64-darwin
+    PATH=$PATH:/usr/local/texlive/2016basic/bin/x86_64-darwin
 
     PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
