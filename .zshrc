@@ -62,14 +62,6 @@ export PAGER=less
 # Enable node version manager (nvm)
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 
-# If a binary go distribution exists, add it to PATH
-# From here: http://golang.org/dl/
-if [[ -d ~/Downloads/go ]]; then
-    export GOROOT=~/Downloads/go
-    export GOPATH=~/src/go
-    PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-fi
-
 # resize images using GraphicsMagick
 #
 #   $ smartresize DSC_0788.JPG 1920x1080 outputdir [quality]
