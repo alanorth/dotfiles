@@ -62,9 +62,6 @@ export PAGER=less
 # Enable node version manager (nvm)
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 
-# If a private bin directory exists, add it to PATH
-[[ -d ~/bin ]] && PATH=$PATH:~/bin
-
 # If a binary go distribution exists, add it to PATH
 # From here: http://golang.org/dl/
 if [[ -d ~/Downloads/go ]]; then
