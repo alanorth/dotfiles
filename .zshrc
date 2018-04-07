@@ -43,6 +43,11 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     # See: https://tug.org/mactex/morepackages.html
     PATH=$PATH:/usr/local/texlive/2017basic/bin/x86_64-darwin
 
+    # Manually manage Ruby shit for DSpace build environment (anything is better than RVM)
+    # DSpace Mirage 2 build explicitly looks for GEM_HOME and GEM_PATH
+    export GEM_HOME=~/.gem/ruby/2.5.1
+    export GEM_PATH=~/.gem/ruby/2.5.1
+    PATH=$PATH:~/.gem/ruby/2.5.1/bin
     PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
     # noop
