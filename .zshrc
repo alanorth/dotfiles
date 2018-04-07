@@ -52,7 +52,7 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     # Use node@8 from Homebrew instead of NVM
     PATH=$PATH:/usr/local/opt/node@8/bin
 
-    PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
+    PATH=$PATH:/usr/local/opt/postgresql@9.5/bin
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
     # noop
 fi
