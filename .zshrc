@@ -22,7 +22,7 @@ compinit
 # OS-specific things
 if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     # explicitly add Homebrew binary paths just in case Terminal doesn't inherit it from macOS, for example Alacritty.
-    PATH=$PATH:/usr/local/bin
+    PATH=$PATH:/usr/local/bin:/usr/local/sbin
 
     # Add brew stuff to MANPATH
     MANPATH=/usr/local/share/man:/usr/local/opt/postgresql@9.5/share/man:$PATH
