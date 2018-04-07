@@ -48,6 +48,10 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     export GEM_HOME=~/.gem/ruby/2.5.1
     export GEM_PATH=~/.gem/ruby/2.5.1
     PATH=$PATH:~/.gem/ruby/2.5.1/bin
+
+    # Use node@8 from Homebrew instead of NVM
+    PATH=$PATH:/usr/local/opt/node@8/bin
+
     PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
     # noop
@@ -63,9 +67,6 @@ alias less='less -R' # preserves colors in GNU coreutils' `less`
 export PS1='[%n@%m: %~]$ '
 export EDITOR=vim
 export PAGER=less
-
-# Enable node version manager (nvm)
-[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 
 # resize images using GraphicsMagick
 #
