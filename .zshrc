@@ -55,6 +55,17 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     PATH=$PATH:/usr/local/opt/postgresql@9.5/bin
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
     PATH=$PATH:~/.local/bin
+
+    # Manually manage Ruby shit for DSpace build environment (anything is better than RVM)
+    # DSpace Mirage 2 build explicitly looks for GEM_HOME and GEM_PATH
+    export GEM_HOME=~/.gem/ruby/2.5.0
+    export GEM_PATH=~/.gem/ruby/2.5.0
+    PATH=$PATH:~/.gem/ruby/2.5.0/bin
+
+    # System Node.js with local "global" package prefix, for DSpace build environment:
+    #  $ npm config set prefix ~/.node_modules
+    #  $ npm install -g bower grunt grunt-cli
+    PATH=$PATH:~/.node_modules/bin
 fi
 
 alias ls='ls -F --color=auto'
