@@ -54,7 +54,7 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
 
     PATH=$PATH:/usr/local/opt/postgresql@9.5/bin
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
-    # noop
+    PATH=$PATH:~/.local/bin
 fi
 
 alias ls='ls -F --color=auto'
