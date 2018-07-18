@@ -1,5 +1,5 @@
 # Alan's dotfiles
-Dotfiles for pretty much every Linux system I have access to.  After setting up a new host, I do:
+Dotfiles for pretty much every Linux system I have access to. After setting up a new host, I do:
 
 ```console
 $ mkdir ~/src/git
@@ -15,19 +15,19 @@ $ ln -sf ~/src/git/dotfiles/.zshrc .
 ```
 
 ## .bashrc
-Configures the shell to have a custom PS1, add paths for NPM and Homebrew, setup pyenv for virtualenvs, some common aliaes, Solarized dircolors, etc.
+Configures the shell to have a custom PS1 prompt, adds paths for Homebrew, adds some common aliaes, Solarized dircolors, etc.
 
-## .tmuxrc
-Solarized configuration
+## .tmux.conf
+Solarized color scheme with key bindings like GNU screen.
 
-## .vimrc
-Syntax highlighting, Solarized color scheme, tab stops to 4 spaces, etc.
+## .vim + .vimrc
+Syntax highlighting, Solarized color scheme, tab stops to four spaces, etc.
 
 ## .zshrc
-Configures a custom prompt, adds paths for pkgsrc on Mac OS X, sets up pyenv, adds aliases, Solarized dircolors, etc.
+Configures the shell to have a custom PS1 prompt, adds paths for Homebrew, adds some common aliases, Solarized dircolors, etc.
 
 ## License
-Copyright (C) 2015  Alan Orth
+Copyright (C) 2015–2018  Alan Orth
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
