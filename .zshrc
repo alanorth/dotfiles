@@ -54,7 +54,7 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
 
     PATH=$PATH:/usr/local/opt/postgresql@9.5/bin
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
-    PATH=$PATH:~/.local/bin
+    PATH=~/.local/bin:$PATH
 
     # Manually manage Ruby shit for DSpace build environment (anything is better than RVM)
     # DSpace Mirage 2 build explicitly looks for GEM_HOME and GEM_PATH
