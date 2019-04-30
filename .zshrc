@@ -58,9 +58,9 @@ elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
 
     # Manually manage Ruby shit for DSpace build environment (anything is better than RVM)
     # DSpace Mirage 2 build explicitly looks for GEM_HOME and GEM_PATH
-    export GEM_HOME=~/.gem/ruby/2.5.0
-    export GEM_PATH=~/.gem/ruby/2.5.0
-    PATH=$PATH:~/.gem/ruby/2.5.0/bin
+    export GEM_HOME=~/.gem/ruby/2.6.0
+    export GEM_PATH=~/.gem/ruby/2.6.0
+    PATH=$PATH:~/.gem/ruby/2.6.0/bin
 
     # System Node.js with local "global" package prefix, for DSpace build environment:
     #  $ npm config set prefix ~/.node_modules
