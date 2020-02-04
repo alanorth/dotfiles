@@ -29,7 +29,7 @@ Syntax highlighting, Solarized color scheme, tab stops to four spaces, etc.
 Configures the shell to have a custom PS1 prompt, adds paths for Homebrew, adds some common aliases, Solarized dircolors, etc.
 
 ## License
-Copyright (C) 2015–2018  Alan Orth
+Copyright (C) 2015–2020  Alan Orth
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
