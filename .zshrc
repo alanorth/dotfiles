@@ -66,6 +66,16 @@ elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
     #  $ npm config set prefix ~/.node_modules
     #  $ npm install -g bower grunt grunt-cli
     PATH=$PATH:~/.node_modules/bin
+
+    if [[ -n $WAYLAND_DISPLAY ]]; then
+        export MOZ_ENABLE_WAYLAND=1
+        export KITTY_ENABLE_WAYLAND=1
+        export QT_QPA_PLATFORM=wayland-egl
+        export CLUTTER_BACKEND=wayland
+        # 2020-02-10: https://github.com/swaywm/sway/wiki#issues-with-java-applications
+        export _JAVA_AWT_WM_NONREPARENTING=1
+        export SDL_VIDEODRIVER=wayland
+    fi
 fi
 
 alias ls='ls -F --color=auto'
