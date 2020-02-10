@@ -65,8 +65,8 @@ output DP-4 {
 
 output HDMI-A-1 {
     scale 1
-    resolution 1920x1080
-    position 1920,0
+    resolution 1280x720
+    position 1280,0
 }
 
 
