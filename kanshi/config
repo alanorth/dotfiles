@@ -1,0 +1,18 @@
+{
+    output eDP-1 scale 2 mode 2560x1440 position 0,0
+    output HDMI-A-1 scale 1 mode 1280x720 position 1280,0
+}
+
+{
+    output eDP-1 scale 2 mode 2560x1440 position 0,0
+}
+
+{
+    output eDP-1 disable
+    output DP-3 scale 2 mode 2560x1440 position 0,0
+}
+
+{
+    output eDP-1 disable
+    output DP-4 scale 2 mode 2560x1440 position 0,0
+}
