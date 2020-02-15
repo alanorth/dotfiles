@@ -14,6 +14,8 @@ $ ln -sf ~/src/git/dotfiles/.dircolors.ansi-dark .
 $ ln -sf ~/src/git/dotfiles/.zshrc .
 $ mkdir -p ~/.config
 $ ln -sf ~/src/git/dotfiles/sway .config
+$ ln -sf ~/src/git/dotfiles/mako .config
+$ ln -sf ~/src/git/dotfiles/kanshi .config
 ```
 
 ## .bashrc
