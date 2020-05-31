@@ -31,6 +31,7 @@ assign [app_id="firefox"] 1
 assign [app_id="Alacritty"] 2
 assign [app_id="geary"] 3
 assign [app_id="thunderbird"] 3
+for_window [app_id="gnome-calculator"] floating enable
 
 ### Output configuration
 #
