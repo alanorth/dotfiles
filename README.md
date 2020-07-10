@@ -10,7 +10,6 @@ $ ln -sf ~/src/git/dotfiles/.bashrc .
 $ ln -sf ~/src/git/dotfiles/.vim .
 $ ln -sf ~/src/git/dotfiles/.vimrc .
 $ ln -sf ~/src/git/dotfiles/.tmux.conf .
-$ ln -sf ~/src/git/dotfiles/.dircolors.ansi-dark .
 $ ln -sf ~/src/git/dotfiles/.zshrc .
 $ mkdir -p ~/.config
 $ ln -sf ~/src/git/dotfiles/sway .config
@@ -19,16 +18,16 @@ $ ln -sf ~/src/git/dotfiles/kanshi .config
 ```
 
 ## .bashrc
-Configures the shell to have a custom PS1 prompt, adds paths for Homebrew, adds some common aliaes, Solarized dircolors, etc.
+Configures the shell to have a custom PS1 prompt, adds paths for Homebrew, adds some common aliases, Selenized dircolors, etc.
 
 ## .tmux.conf
 Solarized color scheme with key bindings like GNU screen.
 
 ## .vim + .vimrc
-Syntax highlighting, Solarized color scheme, tab stops to four spaces, etc.
+Syntax highlighting, Selenized color scheme, tab stops to four spaces, etc.
 
 ## .zshrc
-Configures the shell to have a custom PS1 prompt, adds paths for Homebrew, adds some common aliases, Solarized dircolors, etc.
+Configures the shell to have a custom PS1 prompt, adds paths for Homebrew, adds some common aliases, Selenized dircolors, etc.
 
 ## License
 Copyright (C) 2015–2020  Alan Orth
