@@ -12,7 +12,9 @@ filetype plugin on      " enable file type plugins
 filetype indent on      " enable file type indents
 
 set background=dark
-colorscheme solarized
+" restrict vim to 16 ANSI colors in the palette instead of approximating 256
+set t_Co=16
+colorscheme selenized
 
 " for per-directory vimrc files
 " see: https://jezenthomas.com/how-i-write-invoices-in-vim/
