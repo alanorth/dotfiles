@@ -45,8 +45,9 @@ fi
 # If a private bin directory exists, add it to PATH
 [[ -d ~/bin ]] && PATH="$PATH:~/bin"
 
-# solarized dircolors (needs coreutils from homebrew on Mac OS X)
-[[ -r ~/.dircolors.ansi-dark ]] && eval `dircolors ~/.dircolors.ansi-dark`
+# selenized dircolors
+# see: https://github.com/jan-warchol/selenized/tree/master/other-apps/dircolors
+export LS_COLORS="$LS_COLORS:ow=1;7;34:st=30;44:su=30;41"
 
 # Settings
 # Don't exit when accidentally pressing ^D
