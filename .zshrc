@@ -81,8 +81,10 @@ fi
 alias ls='ls -F --color=auto'
 alias less='less -R' # preserves colors in GNU coreutils' `less`
 
-# solarized dircolors
-[[ -r ~/.dircolors.ansi-dark ]] && eval `dircolors ~/.dircolors.ansi-dark`
+# selenized dircolors
+# see: https://github.com/jan-warchol/selenized/tree/master/other-apps/dircolors
+export LS_COLORS="$LS_COLORS:ow=1;7;34:st=30;44:su=30;41"
+
 
 # Environment
 export PS1='[%n@%m: %~]$ '
