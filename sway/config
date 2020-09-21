@@ -127,7 +127,7 @@ input type:touchpad {
 }
 
 input type:keyboard {
-    xkb_layout "us,bg(bas_phonetic),ara"
+    xkb_layout "us,bg(phonetic),ara"
     xkb_options grp:caps_toggle,grp_led:caps
 }
 
