@@ -42,25 +42,8 @@ if [[ "$OSTYPE" =~ ^darwin.*$ ]]; then
     # Add BasicTeX to PATH
     # See: https://tug.org/mactex/morepackages.html
     PATH=$PATH:/usr/local/texlive/2017basic/bin/x86_64-darwin
-
-    # Manually manage Ruby shit for DSpace build environment (anything is better than RVM)
-    # DSpace Mirage 2 build explicitly looks for GEM_HOME and GEM_PATH
-    export GEM_HOME=~/.gem/ruby/2.5.1
-    export GEM_PATH=~/.gem/ruby/2.5.1
-    PATH=$PATH:~/.gem/ruby/2.5.1/bin
-
-    # Use node@8 from Homebrew instead of NVM
-    PATH=$PATH:/usr/local/opt/node@8/bin
-
-    PATH=$PATH:/usr/local/opt/postgresql@9.5/bin
 elif [[ "$OSTYPE" =~ ^linux.*$ ]]; then
     PATH=~/.local/bin:$PATH
-
-    # Manually manage Ruby shit for DSpace build environment (anything is better than RVM)
-    # DSpace Mirage 2 build explicitly looks for GEM_HOME and GEM_PATH
-    export GEM_HOME=~/.gem/ruby/2.7.0
-    export GEM_PATH=~/.gem/ruby/2.7.0
-    PATH=$PATH:~/.gem/ruby/2.7.0/bin
 
     # System Node.js with local "global" package prefix, for DSpace build environment:
     #  $ npm config set prefix ~/.node_modules
